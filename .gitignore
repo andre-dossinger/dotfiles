@@ -1,6 +1,11 @@
 # ignore everything
-*
+/*
+
 
 # except for
-!.gitignore
-!.config/nvim/**
+!/.gitignore
+
+!/.config/
+/.config/*
+
+!/.config/nvim/
