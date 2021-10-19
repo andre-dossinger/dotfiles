@@ -5,7 +5,12 @@
 # except for
 !/.gitignore
 
+!/.profile
+!/.zshrc
+!/.p10k.zsh
+
 !/.config/
 /.config/*
 
 !/.config/nvim/
+!/.config/i3
