@@ -59,12 +59,12 @@ set termguicolors
 colorscheme deep-space
 
 "" deep space + lightline complete file name
-let g:lightline = { 
-   \ 'colorscheme': 'deepspace',
-  \ 'active': {
-        \  'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
-  \  }
-  \}
+let g:lightline = {
+\		'colorscheme': 'deepspace',
+\		'active': {
+\			'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+\		}
+\	}
 
 
 " vimspector
