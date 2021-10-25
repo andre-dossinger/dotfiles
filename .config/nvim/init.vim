@@ -15,7 +15,7 @@ Plug 'https://github.com/airblade/vim-gitgutter'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'arcticicestudio/nord-vim'
 
 Plug 'jparise/vim-graphql'
 
@@ -52,19 +52,9 @@ nnoremap tk :tabNext<CR>
 nnoremap tj :tabnext<CR>
 
 
-" deep space theme
+" theme
 
-set background=dark
-set termguicolors
-colorscheme deep-space
-
-"" deep space + lightline complete file name
-let g:lightline = {
-\		'colorscheme': 'deepspace',
-\		'active': {
-\			'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
-\		}
-\	}
+colorscheme nord
 
 
 " vimspector
