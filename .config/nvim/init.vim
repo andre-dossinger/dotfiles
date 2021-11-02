@@ -51,6 +51,13 @@ cnoreabbrev <expr> tn getcmdtype() == ":" && getcmdline() == 'tn' ? 'tabnew' : '
 nnoremap tk :tabNext<CR>
 nnoremap tj :tabnext<CR>
 
+"" always show full file path in status line
+let g:lightline = {
+	\		'active': {
+	\			'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+	\		}
+	\	}
+
 
 " theme
 
