@@ -182,6 +182,8 @@ client.focused_inactive #2f343f #2f343f #d8dee8
 client.urgent           #2f343f #ebcb8b #2f343f
 
 # gaps - requires, you guessed it, i3-gaps
+# gaps will only work correctly if you disable window titlebars entirely
+for_window [class="^.*"] border pixel 1
 gaps inner 10
 gaps outer 0
 smart_gaps on
