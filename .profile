@@ -11,7 +11,7 @@ export TERMINAL=alacritty
 export PATH="$PATH":"$HOME"/go/bin
 
 # set wallpaper
-wallpaper=~/.wallpaper.jpg
+wallpaper=~/.wallpaper
 test -f "$wallpaper" && feh --bg-fill "$wallpaper"
 
 # load untracked .profile additions if present
