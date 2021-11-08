@@ -25,6 +25,8 @@ Plug 'puremourning/vimspector'
 
 Plug 'zivyangll/git-blame.vim'
 
+Plug 'wfxr/minimap.vim'
+
 call plug#end()
 
 
@@ -42,9 +44,12 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
-""  turn relative line numbers on
-:set relativenumber
-:set rnu
+""  turn relative line numbers on (hybrid)
+set number relativenumber
+set nu rnu
+
+"" highlight current line
+set cursorline
 
 "" tab keymapping
 cnoreabbrev <expr> tn getcmdtype() == ":" && getcmdline() == 'tn' ? 'tabnew' : 'tn'
@@ -62,6 +67,16 @@ let g:lightline = {
 " theme
 
 colorscheme nord
+
+
+" minimap
+"   to enable install rust and use cargo: cargo install --locked code-minimap
+
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
+let g:minimap_highlight = 'TODO'
+let g:minimap_highlight_range = 1
 
 
 " vimspector

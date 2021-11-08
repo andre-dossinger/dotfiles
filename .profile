@@ -10,6 +10,9 @@ export TERMINAL=alacritty
 # global go binaries
 export PATH="$PATH":"$HOME"/go/bin
 
+# rust cargo packages
+export PATH="$PATH":"$HOME"/.cargo/bin
+
 # set wallpaper
 wallpaper=~/.wallpaper
 test -f "$wallpaper" && feh --bg-fill "$wallpaper"
