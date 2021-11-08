@@ -48,9 +48,6 @@ endif
 set number relativenumber
 set nu rnu
 
-"" highlight current line
-set cursorline
-
 "" tab keymapping
 cnoreabbrev <expr> tn getcmdtype() == ":" && getcmdline() == 'tn' ? 'tabnew' : 'tn'
 nnoremap tk :tabNext<CR>
