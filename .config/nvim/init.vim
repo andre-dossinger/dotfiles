@@ -30,6 +30,11 @@ Plug 'wfxr/minimap.vim'
 call plug#end()
 
 
+" theme
+
+colorscheme nord
+
+
 " general
 
 "" remap leader key to space bar
@@ -44,9 +49,13 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
-""  turn relative line numbers on (hybrid)
+"" turn relative line numbers on (hybrid)
 set number relativenumber
 set nu rnu
+
+"" highlighting of current line
+set cursorline
+highlight CursorLine term=bold cterm=bold ctermbg=NONE gui=bold
 
 "" tab keymapping
 cnoreabbrev <expr> tn getcmdtype() == ":" && getcmdline() == 'tn' ? 'tabnew' : 'tn'
@@ -59,11 +68,6 @@ let g:lightline = {
 	\			'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
 	\		}
 	\	}
-
-
-" theme
-
-colorscheme nord
 
 
 " minimap
