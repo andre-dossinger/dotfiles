@@ -9,10 +9,16 @@ set -o vi
 export TERMINAL=alacritty
 
 # global go binaries
-export PATH="$PATH":"$HOME"/go/bin
+export PATH="${PATH}:${HOME}/go/bin"
 
 # rust cargo packages
-export PATH="$PATH":"$HOME"/.cargo/bin
+export PATH="${PATH}:${HOME}/.cargo/bin"
+
+# flatpak executables
+export PATH="${PATH}:/var/lib/flatpak/exports/bin"
+
+# refresh dmenu cache
+rm -rf .cache/dmenu_run
 
 # set wallpaper
 wallpaper=~/.wallpaper
