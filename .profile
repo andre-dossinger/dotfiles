@@ -3,7 +3,7 @@
 # editor settings
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-set -o vi
+#set -o vi
 
 # default terminal
 export TERMINAL=alacritty
