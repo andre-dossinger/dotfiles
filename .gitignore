@@ -15,3 +15,6 @@
 !/.config/nvim/
 !/.config/i3
 !/.config/alacritty
+
+!/configuration.nix
+
