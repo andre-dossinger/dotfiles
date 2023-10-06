@@ -76,6 +76,11 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  system.autoUpgrade = {
+    enable = true;
+    dates = "11:00";
+  };
+
   # Configure console keymap
   console.keyMap = "de";
 
