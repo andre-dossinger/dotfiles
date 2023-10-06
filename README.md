@@ -18,7 +18,7 @@ sudo rm /etc/nixos/configuration.nix
 sudo ln configuration.nix /etc/nixos/configuration.nix
 ```
 
-For now installing oh-my-zsh and powerlevel10k must be installed manually:
+For now oh-my-zsh and powerlevel10k must be installed manually:
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
