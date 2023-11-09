@@ -16,5 +16,6 @@
 !/.config/i3
 !/.config/alacritty
 
-!/configuration.nix
+!/.nixos/
+!/.nixos/*
 

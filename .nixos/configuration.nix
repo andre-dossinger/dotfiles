@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./workstation-additional-packages.nix
     ];
 
   # Bootloader.
@@ -113,6 +114,7 @@
     jq
     ripgrep
     neovim
+    xclip
     alacritty
     git
     rsync
