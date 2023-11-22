@@ -116,6 +116,7 @@
     unzip
     nodejs_20
     firefox
+    htop
   ];
 
   virtualisation.docker.enable = true;
