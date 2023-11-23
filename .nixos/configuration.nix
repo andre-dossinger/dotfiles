@@ -9,6 +9,9 @@
     [
       ./hardware-configuration.nix
       ./base.nix
-      #./workstation-additional-packages.nix
+      #./workstation.nix
+      ./server.nix
+      ./node-002.nix
+      ./node-002.secret.nix
     ];
 }

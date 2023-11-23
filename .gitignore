@@ -18,4 +18,5 @@
 
 !/.nixos/
 !/.nixos/*
+/.nixos/*.secret.nix
 

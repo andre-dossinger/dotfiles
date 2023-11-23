@@ -25,3 +25,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
+**Note:** For newly onboarded systems it is recommended to use BTRFS. To enable DUP profile also on the data use `sudo btrfs balance start -dconvert=dup  -mconvert=dup /`. You can check the effect using `sudo btrfs filesystem df /`.
+

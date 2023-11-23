@@ -10,12 +10,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # network setup
-  networking = {
-    hostName = "nixos";
-    useDHCP = true;
-  };
-
   # set time zone
   time.timeZone = "Europe/Berlin";
   services.ntp.enable = true;
@@ -33,30 +27,6 @@
     LC_PAPER = "de_DE.UTF-8";
     LC_TELEPHONE = "de_DE.UTF-8";
     LC_TIME = "de_DE.UTF-8";
-  };
-
-  # configure X11
-  services.xserver = {
-    layout = "de";
-    xkbVariant = "";
-
-    enable = true;
-    desktopManager.xterm.enable = false;
-    desktopManager.xfce = {
-      enable = true;
-      noDesktop = true;
-      enableXfwm = false;
-    };
-    displayManager.defaultSession = "xfce+i3";
-    windowManager.i3 = {
-      enable = true;
-      extraPackages = with pkgs; [
-        dmenu
-	      i3status
-	      i3lock
-	      i3blocks
-      ];
-    };
   };
 
   # auto cleanup
