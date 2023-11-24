@@ -10,5 +10,9 @@
     nameservers = [ "192.168.1.2" ];
   };
 
+  system.autoUpgrade = {
+    allowReboot = true;
+  };
+
 }
 

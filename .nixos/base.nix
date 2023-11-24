@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
@@ -37,11 +33,14 @@
     options = "--delete-older-than 30d";
   };
 
+  # enable nix flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # automatic system upgrade
+  # The status of the timer can be inspected using: sudo systemctl status nixos-upgrade.service/timer
   system.autoUpgrade = {
     enable = true;
-    dates = "11:00";
+    dates = "02:00";
   };
 
   # configure console keymap
@@ -92,7 +91,6 @@
   environment.shells = with pkgs; [ zsh ];
 
   # enabled services
-  services.spice-vdagentd.enable = true;
   services.openssh.enable = true;
 
   # This value determines the NixOS release from which the default
@@ -101,5 +99,8 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+  # The current configuration is build for the nixos unstable channel. To switch to the unstable channel use: nix-channel --add https://nixos.org/channels/nixos-unstable nixos
   system.stateVersion = "23.05"; # Did you read the comment?
+
 }
+

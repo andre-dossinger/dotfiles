@@ -12,5 +12,10 @@
     nameservers = [ "192.168.1.2" ];
   };
 
+  system.autoUpgrade.rebootWindow = {
+    lower = "03:00";
+    upper = "03:30";
+  };
+
 }
 

@@ -3,7 +3,6 @@
 {
 
   networking = {
-    hostName = "nixos";
     useDHCP = true;
   };
 
