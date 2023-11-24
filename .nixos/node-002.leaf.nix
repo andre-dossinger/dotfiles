@@ -2,6 +2,18 @@
 
 {
 
+  imports = [
+    /etc/nixos/hardware-configuration.nix
+    ./base.nix
+    ./server.nix
+    ./node-002.secret.nix
+  ];
+  nix.nixPath = [
+    "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
+    "nixos-config=/home/ad/.nixos/node-002.leaf.nix"
+    "/nix/var/nix/profiles/per-user/root/channels"
+  ];
+
   networking = {
     hostName = "node-002";
     interfaces.enp2s0.ipv4.addresses = [ {

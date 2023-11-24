@@ -5,7 +5,7 @@ Here you find my favorite dotfiles (the ones I would miss in case my systems get
 *Note:* Compatibility is only verified on Arch Linux.
 
 ## Getting Started on NixOS
-Generate a base system and clone this repo in the home (~) directory. Afterwards symlink selected `.nix` files:
+Generate a base system and clone this repo in the home (~) directory. Afterwards change the NixOS configuration location to a fitting leaf configuration in your home directory:
 ``` sh
 git clone git@github.com:andre-dossinger/dotfiles.git
 cp -r dotfiles/.git .git
@@ -15,9 +15,9 @@ git stash
 git stash drop
 
 sudo rm /etc/nixos/configuration.nix
-sudo ln .nixos/configuration.nix /etc/nixos/configuration.nix # adjust imports according to selected .nix files
-sudo ln .nixos/<other-config-files>.nix
+sudo nixos-rebuild switch -I nixos-config=/home/ad/.nixos/<wanted-leaf-configuration>.leaf.nix
 ```
+After changing the NixOS configuration location the system can be rebuild as per usual using `sudo nixos-rebuild switch --upgrade`.
 
 For now oh-my-zsh and powerlevel10k must be installed manually:
 ```
