@@ -6,6 +6,8 @@
     /etc/nixos/hardware-configuration.nix
     ./base.nix
     ./server.nix
+    ./k8s-server.nix
+    ./k8s-server.secret.nix
     ./node-002.secret.nix
   ];
   nix.nixPath = [
