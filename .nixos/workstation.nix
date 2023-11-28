@@ -6,10 +6,8 @@
     useDHCP = true;
   };
 
-  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-    terraform
-    go
+    gnome.nautilus
   ];
 
   services.xserver = {
