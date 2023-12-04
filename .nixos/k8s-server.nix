@@ -33,8 +33,7 @@
     role = "server";
     serverAddr = "https://192.168.1.202:6443";
     extraFlags = toString [
-      "--disable=traefik"
-      "--disable=servicelb"
+      "--disable=traefik,servicelb"
       "--write-kubeconfig-mode=0644"
     ];
   };
