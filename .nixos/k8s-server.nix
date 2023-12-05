@@ -24,14 +24,13 @@
   '';
   services.openiscsi = {
     enable = true;
-    name = "iqn.2023-11.internal.lab.iscsi:${config.networking.hostName}";
+    # name = "iqn.node-00X.internal.lab.iscsi:${config.networking.hostName}"; # found in node specific nix configuration
   };
 
   # In case of issues reset k3s using: ´sudo rm -rf /var/lib/rancher´ and rebuild nixos
   services.k3s = {
     enable = true;
     role = "server";
-    serverAddr = "https://192.168.1.202:6443";
     extraFlags = toString [
       "--disable=traefik,servicelb"
       "--write-kubeconfig-mode=0644"
