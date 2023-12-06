@@ -34,7 +34,7 @@
   };
 
   # enable nix flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  # nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # automatic system upgrade
   # The status of the timer can be inspected using: sudo systemctl status nixos-upgrade.service/timer
