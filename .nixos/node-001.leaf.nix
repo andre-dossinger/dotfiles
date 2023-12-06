@@ -12,7 +12,7 @@
   ];
   nix.nixPath = [
     "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
-    "nixos-config=/home/ad/.nixos/node-002.leaf.nix"
+    "nixos-config=/home/ad/.nixos/node-001.leaf.nix"
     "/nix/var/nix/profiles/per-user/root/channels"
   ];
 

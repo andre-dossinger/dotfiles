@@ -2,7 +2,7 @@
 
 Here you find my favorite dotfiles (the ones I would miss in case my systems get nuked). Feel free to copy, modify, distribute, merge or make fun of them. If the latter is the case I would appreciate tips for improvement.
 
-*Note:* Compatibility is only verified on Arch Linux.
+*Note:* Compatibility is only verified on Arch Linux and NixOS.
 
 ## Getting Started on NixOS
 Generate a base system and clone this repo in the home (~) directory. Afterwards change the NixOS configuration location to a fitting leaf configuration in your home directory:
@@ -11,11 +11,14 @@ git clone git@github.com:andre-dossinger/dotfiles.git
 cp -r dotfiles/.git .git
 rm -rf dotfiles
 git add .
+git reset .ssh
 git stash
 git stash drop
 
-sudo rm /etc/nixos/configuration.nix
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+sudo nixos-rebuild switch --upgrade
 sudo nixos-rebuild switch -I nixos-config=/home/ad/.nixos/<wanted-leaf-configuration>.leaf.nix
+sudo rm /etc/nixos/configuration.nix
 ```
 After changing the NixOS configuration location the system can be rebuild as per usual using `sudo nixos-rebuild switch --upgrade`.
 
