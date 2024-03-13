@@ -118,3 +118,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # manual customizations
 alias e=nvim
+alias mntvmshare="$HOME/.scripts/mntvmshare.sh"
+alias umntvmshare="$HOME/.scripts/umntvmshare.sh"
+
