@@ -18,3 +18,8 @@
 
 !/.scripts/
 
+!/.bin/
+/.bin/*
+
+!/.bin/README.md
+

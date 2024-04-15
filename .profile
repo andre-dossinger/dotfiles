@@ -17,6 +17,9 @@ export PATH="${PATH}:${HOME}/.cargo/bin"
 # flatpak executables
 export PATH="${PATH}:/var/lib/flatpak/exports/bin"
 
+# custom executables
+export PATH="${PATH}:${HOME}/.bin"
+
 # refresh dmenu cache
 rm -rf .cache/dmenu_run
 
