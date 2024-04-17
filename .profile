@@ -27,6 +27,3 @@ rm -rf .cache/dmenu_run
 wallpaper=~/.wallpaper
 test -f "$wallpaper" && feh --bg-fill "$wallpaper"
 
-# load untracked .profile additions if present
-untracked_profile_additions=~/.untracked-profile-additions.sh
-test -f "$untracked_profile_additions" && . "$untracked_profile_additions"
