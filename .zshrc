@@ -123,3 +123,6 @@ alias e=nvim
 untracked_profile_additions=~/.untracked-profile-additions.sh
 test -f "$untracked_profile_additions" && . "$untracked_profile_additions"
 
+# ensure .profile is sourced
+. $HOME/.profile
+
