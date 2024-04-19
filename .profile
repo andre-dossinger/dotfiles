@@ -28,4 +28,6 @@ rm -rf .cache/dmenu_run
 
 # set wallpaper
 wallpaper=~/.wallpaper
-test -f "$wallpaper" && feh --bg-fill "$wallpaper"
+if [[ -f "$wallpaper" ]]; then
+	feh --bg-fill "$wallpaper"
+fi
