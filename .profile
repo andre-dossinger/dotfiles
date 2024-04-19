@@ -20,10 +20,12 @@ export PATH="${PATH}:/var/lib/flatpak/exports/bin"
 # custom executables
 export PATH="${PATH}:${HOME}/.bin"
 
+# custom scripts
+export PATH="${PATH}:${HOME}/.scripts"
+
 # refresh dmenu cache
 rm -rf .cache/dmenu_run
 
 # set wallpaper
 wallpaper=~/.wallpaper
 test -f "$wallpaper" && feh --bg-fill "$wallpaper"
-
