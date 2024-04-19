@@ -1,0 +1,6 @@
+#!/bin/sh
+
+wl-paste >/tmp/vmclipsend
+scp -r /tmp/vmclipsend D064955@192.168.64.1:/tmp/vmclipsend
+rm /tmp/vmclipsend
+ssh D064955@192.168.64.1 -f 'cat /tmp/vmclipsend | pbcopy && rm /tmp/vmclipsend'

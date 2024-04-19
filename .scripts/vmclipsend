@@ -1,0 +1,6 @@
+#!/bin/sh
+
+pbpaste >/tmp/vmclipsend
+scp -r /tmp/vmclipsend ad@192.168.64.2:/tmp/vmclipsend
+rm /tmp/vmclipsend
+ssh ad@192.168.64.2 -f 'WAYLAND_DISPLAY=wayland-1 wl-copy < /tmp/vmclipsend && rm /tmp/vmclipsend'
