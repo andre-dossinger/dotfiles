@@ -118,8 +118,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # manual customizations
 alias e=nvim
-alias mntvmshare="$HOME/.scripts/mntvmshare.sh"
-alias umntvmshare="$HOME/.scripts/umntvmshare.sh"
 
 # load untracked .profile additions if present
 untracked_profile_additions=~/.untracked-profile-additions.sh
