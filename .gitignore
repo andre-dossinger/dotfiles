@@ -12,7 +12,8 @@
 !/.config/
 /.config/*
 
-!/.config/nvim/
+!/.config/nvim
+/.config/nvim/lazy-lock.json
 !/.config/i3
 !/.config/alacritty
 !/.config/hypr
