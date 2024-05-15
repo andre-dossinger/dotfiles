@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#####
+# Credits: https://github.com/blang/latex-docker
+# To build the a latex document using docker open a terminal at the source folder and execute the commands below:
+# ./latexdockercmd xelatex main.tex
+#####
+
+set -e
+
+IMAGE=blang/latex:ubuntu
+#exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data "$IMAGE" "$@"
+#exec podman run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data "$IMAGE" "$@"
+#exec podman run --rm -i --net=none -v "$PWD":/data "$IMAGE" "$@"
+
+docker volume create latex-data-volume
+docker create -v latex-data-volume:/data --name latex-helper busybox true
+docker cp "$PWD"/. latex-helper:/data
+docker rm latex-helper
+docker run --rm -i --net=none -v latex-data-volume:/data "$IMAGE" "$@"
+docker create -v latex-data-volume:/data --name latex-helper busybox true
+docker cp latex-helper:/data/main.pdf .
+docker rm latex-helper
+docker volume rm latex-data-volume
