@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# Description: Downloads Web Albums shared by Apple Photos
+# Requirements: jq
+# Usage: ./icloud-album-download.sh <URL> [<target folder>]
+# Source: https://gist.github.com/AlexanderWillner/b8124af1979e88d4046987c953b8260f
+# Author: @zneak, @WildDIC, @AlexanderWillner
+
+if [[ -z "$1" ]]; then
+	echo "Syntax: $0 <URL> [<target folder>]" >&2
+	exit 1
+fi
+
+command -v jq >/dev/null 2>&1 || {
+	echo "Error: needing command 'jq'" >&2
+	exit 2
+}
+
+function curl_post_json {
+	curl -sH "Content-Type: application/json" -X POST -d "@-" "$@"
+}
+
+ALBUM="$(echo $1 | cut -d# -f2)"
+BASE_API_URL="https://p23-sharedstreams.icloud.com/${ALBUM}/sharedstreams"
+
+echo "Downloading album '$ALBUM'..."
+
+pushd $2 >/dev/null 2>&1
+STREAM=$(echo '{"streamCtag":null}' | curl_post_json "$BASE_API_URL/webstream")
+HOST=$(echo $STREAM | jq '.["X-Apple-MMe-Host"]' | cut -c 2- | rev | cut -c 2- | rev)
+
+echo " - Host: $HOST"
+echo " - Stream: $STREAM"
+
+if [ "$HOST" ]; then
+	BASE_API_URL="https://$(echo $HOST)/$(echo $1 | cut -d# -f2)/sharedstreams"
+	STREAM=$(echo '{"streamCtag":null}' | curl_post_json "$BASE_API_URL/webstream")
+fi
+
+CHECKSUMS=$(echo $STREAM | jq -r '.photos[] | [(.derivatives[] | {size: .fileSize | tonumber, value: .checksum})] | max_by(.size | tonumber).value')
+
+echo $STREAM |
+	jq -c "{photoGuids: [.photos[].photoGuid]}" |
+	curl_post_json "$BASE_API_URL/webasseturls" |
+	jq -r '.items | to_entries[] | "https://" + .value.url_location + .value.url_path + "&" + .key' |
+	while read URL; do
+		for CHECKSUM in $CHECKSUMS; do
+			if echo $URL | grep $CHECKSUM >/dev/null; then
+				curl -sOJ $URL &
+				echo " - Downloading picture $CHECKSUM..."
+				break
+			fi
+		done
+	done
+
+popd >/dev/null
+wait
