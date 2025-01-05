@@ -9,5 +9,6 @@ shell-integration-features = no-cursor
 window-decoration = false
 
 theme = catppuccin-frappe
+background-opacity = 0.95
 
 auto-update = off
