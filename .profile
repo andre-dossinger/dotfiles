@@ -6,7 +6,7 @@ export EDITOR="$VISUAL"
 #set -o vi
 
 # default terminal
-export TERMINAL=alacritty
+export TERMINAL=ghostty
 
 # global go binaries
 export PATH="${PATH}:${HOME}/go/bin"

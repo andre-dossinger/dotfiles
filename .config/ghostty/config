@@ -1,0 +1,13 @@
+font-family = "Hurmit Nerd Font"
+font-size = 8.5
+
+confirm-close-surface = false
+
+cursor-style = block
+
+shell-integration-features = no-cursor
+window-decoration = false
+
+theme = catppuccin-frappe
+
+auto-update = off

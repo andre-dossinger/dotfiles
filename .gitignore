@@ -16,6 +16,7 @@
 /.config/nvim/lazy-lock.json
 !/.config/i3
 !/.config/alacritty
+!/.config/ghostty
 !/.config/hypr
 !/.config/waybar
 
