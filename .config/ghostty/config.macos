@@ -1,0 +1,10 @@
+font-family = "Hurmit Nerd Font"
+font-size = 9.5
+
+confirm-close-surface = false
+
+cursor-style = block
+
+theme = catppuccin-frappe
+
+auto-update = off
