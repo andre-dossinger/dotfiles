@@ -6,7 +6,7 @@ Here you find my favorite dotfiles (the ones I would miss in case my systems get
 
 ## Getting Started
 
-Currently [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) is configured to use [powerlevel10k](https://github.com/romkatv/powerlevel10k) and [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode?tab=readme-ov-file).
+Currently [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) is configured to use [Starship](https://github.com/starship/starship) and [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode?tab=readme-ov-file).
 
 ``` sh
 git clone git@github.com:andre-dossinger/dotfiles.git
