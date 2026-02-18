@@ -20,6 +20,10 @@
 !/.config/hypr
 !/.config/waybar
 
+!/.config/opencode/
+/.config/opencode/*
+!/.config/opencode/opencode.json
+
 !/.scripts/
 
 !/.bin/
