@@ -1,14 +1,16 @@
 font-family = "Hurmit Nerd Font"
-font-size = 8.5
 
 confirm-close-surface = false
 
+shell-integration-features = no-cursor
 cursor-style = block
 
-shell-integration-features = no-cursor
-window-decoration = false
-
 theme = catppuccin-frappe
-background-opacity = 0.95
 
 auto-update = off
+
+# Always start new windows/tabs in home directory
+window-inherit-working-directory = false
+
+# include platform-specific config (symlink created by setup.sh)
+config-file = ?config.platform

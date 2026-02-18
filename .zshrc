@@ -78,8 +78,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-## install starship prompt
-eval "$(starship init zsh)"
+## setup platform-specific configs
+source ~/.config/setup.sh
+source ~/.config/ghostty/setup.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

@@ -17,6 +17,7 @@
 !/.config/i3
 !/.config/alacritty
 !/.config/ghostty
+/.config/ghostty/config.platform
 !/.config/hypr
 !/.config/waybar
 

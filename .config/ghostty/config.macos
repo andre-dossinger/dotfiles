@@ -1,11 +1,20 @@
-font-family = "Hurmit Nerd Font"
+# macOS specific configuration
+
 font-size = 9.5
 
-confirm-close-surface = false
+# window/tab switching with option+number
+keybind = alt+1=goto_tab:1
+keybind = alt+2=goto_tab:2
+keybind = alt+3=goto_tab:3
+keybind = alt+4=goto_tab:4
+keybind = alt+5=goto_tab:5
+keybind = alt+6=goto_tab:6
+keybind = alt+7=goto_tab:7
+keybind = alt+8=goto_tab:8
+keybind = alt+9=goto_tab:9
 
-shell-integration-features = no-cursor
-cursor-style = block
+# open new tab with option+enter
+keybind = alt+enter=new_tab
 
-theme = catppuccin-frappe
-
-auto-update = off
+# close tab with option+shift+q
+keybind = alt+shift+q=close_surface
