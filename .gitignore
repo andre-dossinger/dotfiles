@@ -11,6 +11,7 @@
 
 !/.config/
 /.config/*
+!/.config/setup.sh
 
 !/.config/nvim
 /.config/nvim/lazy-lock.json
