@@ -120,3 +120,7 @@ test -f "$untracked_profile_additions" && . "$untracked_profile_additions"
 # ensure .profile is sourced
 . $HOME/.profile
 
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/D064955/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
