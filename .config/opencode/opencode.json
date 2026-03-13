@@ -8,7 +8,16 @@
       "git *": "ask"
     }
   },
+  "share": "disabled",
+  "model": "anthropic/claude-opus-4-6",
+  "small_model": "anthropic/claude-sonnet-4-6",
   "provider": {
+    "anthropic": {
+      "options": {
+        "baseURL": "http://localhost:6655/anthropic/v1",
+        "apiKey": "{env:ANTHROPIC_API_KEY}"
+      }
+    },
     "ollama": {
       "models": {
         "glm-4.7-flash": {
@@ -25,6 +34,18 @@
       "options": {
         "baseURL": "http://192.168.64.1:11434/v1"
       }
+    }
+  },
+  "mcp": {
+    "chrome-devtools": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--executablePath",
+        "/run/current-system/sw/bin/chromium"
+      ]
     }
   }
 }
