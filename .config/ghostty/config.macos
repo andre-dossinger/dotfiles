@@ -2,19 +2,22 @@
 
 font-size = 9.5
 
-# window/tab switching with option+number
-keybind = alt+1=goto_tab:1
-keybind = alt+2=goto_tab:2
-keybind = alt+3=goto_tab:3
-keybind = alt+4=goto_tab:4
-keybind = alt+5=goto_tab:5
-keybind = alt+6=goto_tab:6
-keybind = alt+7=goto_tab:7
-keybind = alt+8=goto_tab:8
-keybind = alt+9=goto_tab:9
+# remap left option to act as super within ghostty so right option stays free
+key-remap = left_alt=super
 
-# open new tab with option+enter
-keybind = alt+enter=new_tab
+# window/tab switching with left option+number
+keybind = super+1=goto_tab:1
+keybind = super+2=goto_tab:2
+keybind = super+3=goto_tab:3
+keybind = super+4=goto_tab:4
+keybind = super+5=goto_tab:5
+keybind = super+6=goto_tab:6
+keybind = super+7=goto_tab:7
+keybind = super+8=goto_tab:8
+keybind = super+9=goto_tab:9
 
-# close tab with option+shift+q
-keybind = alt+shift+q=close_surface
+# open new tab with left option+enter
+keybind = super+enter=new_tab
+
+# close tab with left option+shift+q
+keybind = super+shift+q=close_surface
