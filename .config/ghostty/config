@@ -5,7 +5,7 @@ confirm-close-surface = false
 shell-integration-features = no-cursor
 cursor-style = block
 
-theme = catppuccin-frappe
+theme = Catppuccin Frappe
 
 auto-update = off
 
