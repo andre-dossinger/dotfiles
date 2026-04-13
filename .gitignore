@@ -25,6 +25,8 @@
 !/.config/opencode/
 /.config/opencode/*
 !/.config/opencode/opencode.json
+!/.config/opencode/AGENTS.md
+!/.config/opencode/skills
 
 !/.scripts/
 

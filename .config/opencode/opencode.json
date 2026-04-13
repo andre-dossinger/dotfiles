@@ -21,6 +21,10 @@
     },
     "external_directory": {
       "*": "ask"
+    },
+    "skill": {
+      "*": "ask",
+      "caveman": "allow"
     }
   },
   "share": "disabled",
