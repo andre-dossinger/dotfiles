@@ -13,11 +13,13 @@
     "bash": {
       "*": "ask",
       "git log *": "allow",
+      "head *": "allow",
       "git status *": "allow",
       "git diff *": "allow",
       "git branch *": "allow",
       "git show *": "allow",
-      "ls *": "allow"
+      "ls *": "allow",
+      "grep *": "allow"
     },
     "external_directory": {
       "*": "ask"
